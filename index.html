@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <!-- SEO -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Gerador de senhas, Password Generator">
+    <meta name="description" content="Gerador de senhas de acordo com o número de caracteres">
+    <title>Gerador de senhas</title>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <main>
+        <h1 class="title">Gerador de Senha</h1>
+
+        <div>
+            <p class="description-password">Tamanho <span id="sizePassword"></span> caracteres</p>
+        </div>
+        <div>
+            <input id="rangeInput" class="range" type="range" min="6" max="25" value="8">
+            <button id="generatePassword" onclick="generatedPassword()" class="cta-password">Gerar Senha</button>
+        </div>
+
+
+        <div id="containerPassword" class="hidden">
+            <p class="title-password">Sua senha gerada foi:</p>
+            <p  onclick="copyPassword()" id="password" class="password">873487348734</p>
+            <p id="copy" class="copy">Copiado!</p>
+            <p id="tooltip" class="tooltip">Clique na senha para copiar 👆</p>
+        </div>
+    </main>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
